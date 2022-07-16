@@ -14,14 +14,12 @@ const Container = styled.div`
   align-items: center;
   font-family: "Shadows Into Light", cursive;
   letter-spacing: 2px;
-  transition: background-color ease-in 0.3s;
 `;
 
 const Name = styled.div`
   font-size: 20px;
   span:first-child {
     color: ${(props) => props.theme.redColor};
-    transition: color ease-in 0.3s;
   }
 `;
 
