@@ -1,5 +1,11 @@
 import * as React from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import router from "../router";
+
+interface IItemProps {
+  isHere: boolean;
+}
 
 const Container = styled.div`
   position: fixed;
@@ -13,7 +19,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Edu NSW ACT Foundation", cursive;
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
 `;
@@ -21,6 +27,7 @@ const Container = styled.div`
 const Name = styled.div`
   font-size: 1.25em;
   font-size: 1.25rem;
+  font-weight: 700;
   span:first-child {
     color: ${(props) => props.theme.redColor};
     margin-right: 10px;
@@ -36,7 +43,29 @@ const List = styled.ul`
   }
 `;
 
+const Item = styled.li<IItemProps>`
+  a {
+    font-weight: 500;
+    color: ${(props) => props.isHere && props.theme.redColor};
+    :hover {
+      color: ${(props) => props.theme.redColor};
+    }
+    transition: color 0.3s ease;
+  }
+`;
+
+const navListArr = [
+  { name: "About", pathname: router.home },
+  { name: "What", pathname: router.what },
+  { name: "How", pathname: router.how },
+  { name: "Who", pathname: router.who },
+  { name: "Play", pathname: router.play },
+];
+
 const Header = () => {
+  const location = useLocation();
+  const { pathname } = location;
+
   return (
     <Container>
       <Name>
@@ -45,11 +74,13 @@ const Header = () => {
       </Name>
       <nav>
         <List>
-          <li>About</li>
-          <li>What</li>
-          <li>How</li>
-          <li>Who</li>
-          <li>Play</li>
+          {navListArr.map((item, index) => {
+            return (
+              <Item key={index} isHere={item.pathname === pathname}>
+                <Link to={item.pathname}>{item.name}</Link>
+              </Item>
+            );
+          })}
         </List>
       </nav>
     </Container>
