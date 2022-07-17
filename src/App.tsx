@@ -6,11 +6,15 @@ import { darkTheme, GlobalStyle, lightTheme } from "./styles";
 import { ThemeProvider } from "styled-components";
 
 function App() {
+  const [darkMode, setDarMode] = React.useState(false);
   return (
-    <ThemeProvider theme={true ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
       <Routes>
-        <Route path={router.home} element={<Home />} />
+        <Route
+          path={router.home}
+          element={<Home darkMode={darkMode} setDarMode={setDarMode} />}
+        />
       </Routes>
     </ThemeProvider>
   );

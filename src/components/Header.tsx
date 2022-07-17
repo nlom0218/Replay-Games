@@ -1,6 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 
+interface IProps {
+  darkMode: boolean;
+}
+
 const Container = styled.div`
   position: fixed;
   top: 0;
