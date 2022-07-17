@@ -11,8 +11,8 @@ export const lightTheme = {
 
 export const darkTheme = {
   textColor: "rgb(250, 250, 250)",
-  backgroundColor: "rgb(40, 40, 40)",
-  headerBackgroundColor: "rgb(30, 30, 30)",
+  backgroundColor: "rgb(30, 30, 30)",
+  headerBackgroundColor: "rgb(40, 40, 40)",
   redColor: "#ff5454",
 };
 

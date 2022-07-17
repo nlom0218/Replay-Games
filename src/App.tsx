@@ -4,18 +4,18 @@ import Home from "./pages/Home";
 import router from "./router";
 import { darkTheme, GlobalStyle, lightTheme } from "./styles";
 import { ThemeProvider } from "styled-components";
+import DefaultLayout from "./components/DefaultLayout";
 
 function App() {
-  const [darkMode, setDarMode] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(false);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <Routes>
-        <Route
-          path={router.home}
-          element={<Home darkMode={darkMode} setDarMode={setDarMode} />}
-        />
-      </Routes>
+      <DefaultLayout darkMode={darkMode} setDarkMode={setDarkMode}>
+        <Routes>
+          <Route path={router.home} element={<Home />} />
+        </Routes>
+      </DefaultLayout>
     </ThemeProvider>
   );
 }
