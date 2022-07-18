@@ -20,8 +20,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: "Edu NSW ACT Foundation", cursive;
+  /* font-family: "Noto Sans KR", sans-serif; */
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
+  z-index: 1;
 `;
 
 const Name = styled.div`
