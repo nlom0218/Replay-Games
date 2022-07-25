@@ -4,13 +4,13 @@ import router from "../../router";
 import { colors } from "../../styles";
 
 const SIntro = styled.div`
-  padding: 120px 40px;
-  padding: 7.5rem 2.5rem;
+  padding: 120px 40px 80px;
+  padding: 7.5rem 2.5rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: relative;
-  height: 100vh;
+  background-color: ${colors.backgroundColor};
 `;
 
 const GameImg = styled.img`

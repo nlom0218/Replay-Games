@@ -6,6 +6,7 @@ export const colors = {
   backgroundColor: "rgb(245, 245, 245)",
   headerBackgroundColor: "rgb(250, 250, 250)",
   redColor: "#d52020",
+  darkColor: "rgb(30, 30, 30)",
 };
 
 export const GlobalStyle = createGlobalStyle`

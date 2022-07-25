@@ -15,8 +15,8 @@ const Container = styled.div`
   left: 0;
   padding: 20px 40px;
   padding: 1.25rem 2.5rem;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
-  background-color: rgb(235, 222, 251);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  background-color: ${colors.headerBackgroundColor};
   display: flex;
   justify-content: space-between;
   align-items: center;
