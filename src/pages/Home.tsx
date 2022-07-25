@@ -4,8 +4,16 @@ import router from "../router";
 import { colors } from "../styles";
 
 const Container = styled.div`
-  background-color: rgb(242, 234, 251);
-  min-height: 100vh;
+  background-color: rgb(235, 222, 251);
+`;
+
+const Intro = styled.div`
+  padding: 120px 40px 40px;
+  padding: 7.5rem 2.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
 `;
 
 const GameImg = styled.img`
@@ -14,31 +22,27 @@ const GameImg = styled.img`
   height: 35vw;
 `;
 
-const Intro = styled.div`
-  padding: 0px 40px;
-  padding: 0rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100vh;
-  position: relative;
-`;
-
 const IntroMsg = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 5em;
   font-size: 5rem;
   font-weight: 700;
-  span:not(:last-child) {
-    margin-bottom: 50px;
+  > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
   }
-  span:first-child {
+  span:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  span:nth-child(1) {
     font-weight: 700;
     font-size: 1.5em;
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: ${colors.lightTextColor};
+    transform: rotate(-3deg);
   }
   span:nth-child(3) {
     color: #ffc400;
@@ -47,6 +51,15 @@ const IntroMsg = styled.div`
     position: relative;
     margin-top: 10px;
   }
+`;
+
+const Title = styled.div`
+  margin-right: 10px;
+  color: ${colors.backgroundColor};
+  background-color: ${colors.redColor};
+  transform: rotate(-3deg);
+  border-radius: 10px;
+  padding: 15px;
 `;
 
 const StarImg = styled.img`
@@ -87,13 +100,16 @@ const Home = () => {
       <Intro>
         <IntroMsg>
           <span>초등교사 게임제작 커뮤니티</span>
-          <span>리:플레이 게임즈와</span>
+          <div>
+            <Title>리:플레이</Title>
+            <span>게임즈와</span>
+          </div>
           <span>
             함께
             <StarImg src="/img/threeline.png" />
           </span>
           <span>게임을 즐겨보세요!</span>
-          <PlayBtn onClick={onClickPlayBtn}>Play Game</PlayBtn>
+          <PlayBtn onClick={onClickPlayBtn}>PLAY GAME</PlayBtn>
         </IntroMsg>
         <GameImg src="/img/game.png" />
       </Intro>
