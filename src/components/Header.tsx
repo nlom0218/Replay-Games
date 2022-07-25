@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import router from "../router";
+import { colors } from "../styles";
 
 interface IItemProps {
   isHere: boolean;
@@ -14,24 +15,22 @@ const Container = styled.div`
   left: 0;
   padding: 20px 40px;
   padding: 1.25rem 2.5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  background-color: ${(props) => props.theme.headerBackgroundColor};
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+  background-color: rgb(242, 234, 251);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Edu NSW ACT Foundation", cursive;
-  /* font-family: "Noto Sans KR", sans-serif; */
   letter-spacing: 2px;
   letter-spacing: 0.125rem;
   z-index: 1;
 `;
 
 const Name = styled.div`
-  font-size: 1.25em;
-  font-size: 1.25rem;
+  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 700;
   span:first-child {
-    color: ${(props) => props.theme.redColor};
+    color: ${colors.redColor};
     margin-right: 10px;
     margin-right: 0.625rem;
   }
@@ -48,9 +47,9 @@ const List = styled.ul`
 const Item = styled.li<IItemProps>`
   a {
     font-weight: 500;
-    color: ${(props) => props.isHere && props.theme.redColor};
+    color: ${(props) => (props.isHere ? colors.redColor : colors.textColor)};
     :hover {
-      color: ${(props) => props.theme.redColor};
+      color: ${colors.redColor};
     }
     transition: color 0.3s ease;
   }
