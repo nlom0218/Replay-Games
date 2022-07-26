@@ -1,86 +1,102 @@
 import styled from "styled-components";
+import Intro from "../components/Home/Intro";
+import { colors } from "../styles";
+import AboutGroup from "./AboutGroup";
 
 const Container = styled.div``;
 
-const GameImg = styled.img`
-  display: block;
-  width: 40vw;
-  height: 40vw;
+const Layout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  gap: 2.5rem;
+  margin: 60px;
+  margin: 3.75rem;
+  align-items: stretch;
 `;
 
-const Intro = styled.div`
+const LayoutTwo = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+`;
+
+const Image = styled.div`
+  background: url("https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80");
+  background-size: cover;
+  background-position: center;
+`;
+
+const Contents = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100vh;
+  flex-direction: column;
+  line-height: 160%;
+  div:first-child {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  div:last-child {
+    color: ${colors.lightTextColor};
+  }
+`;
+
+const GameImage = styled.img`
+  padding: 0px 20px;
+  padding: 0rem 1.25rem;
   position: relative;
+  top: -180px;
 `;
 
-const IntroMsg = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 6em;
-  font-family: "Noto Sans KR", sans-serif;
-  span:not(:last-child) {
-    margin-bottom: 50px;
-  }
-  span:first-child {
-    font-weight: 700;
-    font-size: 1.5em;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: ${(props) => props.theme.lightTextColor};
-  }
-  span:nth-child(3) {
-    color: #ffcf2e;
-    text-align: end;
-    font-weight: 700;
-    position: relative;
-  }
+const LayoutThree = styled.div`
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  column-gap: 40px;
 `;
 
-const StarImg = styled.img`
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: -40px;
-  transform: rotate(90deg);
-`;
-
-const Scroll = styled.div`
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 20px 20px 10px;
-  cursor: pointer;
-  background-color: orange;
-  border-radius: 30px / 40px;
-`;
-
-const Icon = styled.div`
-  margin-top: 10px;
-  font-size: 1.5em;
-  transform: rotate(60deg) scaleY(2);
+const Image2 = styled.div`
+  position: relative;
+  height: 240%;
+  top: -160px;
+  background-image: url("https://images.unsplash.com/photo-1499540633125-484965b60031?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80");
+  background-size: cover;
+  background-position: center;
 `;
 
 const Home = () => {
   return (
     <Container>
-      <Intro>
-        <IntroMsg>
-          <span>초등교사 게임제작 커뮤니티</span>
-          <span>리:플레이 게임즈와</span>
-          <span>
-            함께
-            <StarImg src="/img/threeline.png" />
-          </span>
-          <span>게임을 즐겨보세요!</span>
-        </IntroMsg>
-        <GameImg src="/img/game.png" />
-      </Intro>
+      <Intro />
+      <AboutGroup />
+      <Layout>
+        <LayoutTwo>
+          <Image></Image>
+          <Contents>
+            <div>CREATIVE</div>
+            <div>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque aliquam soluta saepe deserunt mollitia natus blanditiis
+              unde explicabo, porro culpa numquam! Quia itaque porro quisquam
+              culpa non tenetur numquam accusantium.
+            </div>
+          </Contents>
+        </LayoutTwo>
+        <GameImage src="/img/chess.png" />
+        <LayoutThree>
+          <Contents>
+            <div>ACHIEVEMENT</div>
+            <div>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Doloremque aliquam soluta saepe deserunt mollitia natus blanditiis
+              unde explicabo, porro culpa numquam! Quia itaque porro quisquam
+              culpa non tenetur numquam accusantium.
+            </div>
+          </Contents>
+          <Image2></Image2>
+        </LayoutThree>
+      </Layout>
     </Container>
   );
 };
