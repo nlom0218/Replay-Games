@@ -129,7 +129,7 @@ const MemberCard = ({
         <Avatar avatarUrl={avatarUrl}></Avatar>
       )}
       <Name>{name}</Name>
-      <School>{school !== "" ? school : "학교를 설장하지 않았습니다."}</School>
+      <School>{school !== "" ? school : "학교를 설정하지 않았습니다."}</School>
       {contents !== "" && (
         <Contents>
           <span>
