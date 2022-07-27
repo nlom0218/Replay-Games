@@ -1,5 +1,14 @@
+import MemberCard from "./components/MemberCard";
+import member from "./member";
+
 const Mission = () => {
-  return <div>react 쪼리 mission!</div>;
+  return (
+    <div>
+      {member.map((item, index) => {
+        return <MemberCard key={index} {...item} />;
+      })}
+    </div>
+  );
 };
 
 export default Mission;
