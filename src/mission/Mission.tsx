@@ -9,9 +9,9 @@ const Container = styled.div`
 
 const MemberList = styled.div`
   padding: 40px;
-  max-width: 320px;
+  max-width: 420px;
   margin: 0 auto;
-  div:not(:last-child) {
+  > div:not(:last-child) {
     margin-bottom: 40px;
   }
 `;
