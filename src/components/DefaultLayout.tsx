@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import DarkMode from "./DarkMode";
 import Header from "./Header";
@@ -13,6 +14,12 @@ const Container = styled.div`
 `;
 
 const DefaultLayout = ({ children }: IProps) => {
+  const { pathname } = useLocation();
+
+  if (pathname === "/mission") {
+    return <Container>{children}</Container>;
+  }
+
   return (
     <React.Fragment>
       <Header />
