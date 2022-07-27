@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IMember } from "../member";
 import {
+  AiFillFacebook,
   AiFillGithub,
   AiOutlineInstagram,
   AiOutlineMail,
@@ -59,20 +60,18 @@ const School = styled.div`
 const Contents = styled.div`
   font-size: 14px;
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   color: #474747;
+  text-align: center;
+  line-height: 120%;
   svg {
     display: flex;
   }
-  span:first-child {
-    /* align-self: start; */
-  }
-  span:last-child {
-    /* align-self: end; */
-  }
   div {
     margin: 10px;
+    /* color: #ff5555; */
+    font-weight: 500;
   }
 `;
 
@@ -93,12 +92,34 @@ const MemberCard = ({
   name,
   github,
   instagram,
-  mail,
+  facebook,
   school,
   avatarUrl,
   contents,
 }: IMember) => {
-  console.log(avatarUrl);
+  const onClickSocialBtn = (type: string) => {
+    if (type === "github") {
+      if (github !== "") {
+        window.open(github);
+      } else {
+        window.alert("등록된 github가 없습니다.");
+      }
+    }
+    if (type === "insta") {
+      if (instagram !== "") {
+        window.open(instagram);
+      } else {
+        window.alert("등록된 instagram이 없습니다.");
+      }
+    }
+    if (type === "facebook") {
+      if (facebook !== "") {
+        window.open(facebook);
+      } else {
+        window.alert("등록된 facebook이 없습니다.");
+      }
+    }
+  };
 
   return (
     <Container>
@@ -121,14 +142,14 @@ const MemberCard = ({
         </Contents>
       )}
       <SocialInfo>
-        <div>
+        <div onClick={() => onClickSocialBtn("github")}>
           <AiFillGithub />
         </div>
-        <div>
+        <div onClick={() => onClickSocialBtn("insta")}>
           <AiOutlineInstagram />
         </div>
-        <div>
-          <AiOutlineMail />
+        <div onClick={() => onClickSocialBtn("facebook")}>
+          <AiFillFacebook />
         </div>
       </SocialInfo>
     </Container>
