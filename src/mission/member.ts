@@ -1,0 +1,158 @@
+export interface IMember {
+  name: string;
+  github: string;
+  instagram: string;
+  facebook: string;
+  school: string;
+  avatarUrl: string;
+  contents: string;
+}
+
+const member: IMember[] = [
+  {
+    name: "행복한엄쌤",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "말랑한거봉",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "승민정",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "홍동",
+    github: "https://github.com/nlom0218",
+    instagram: "https://www.instagram.com/hhhong_dong/",
+    facebook: "",
+    school: "서원주초등학교",
+    avatarUrl: "/img/mission/hd.jpeg",
+    contents: "저희 깃허브 팔로우 해요! 😃",
+  },
+  {
+    name: "개자봉",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "김대충",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "도리",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "밀짚모자",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "설탕",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "손현준",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "승짱",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "윌로우블렌드",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "죠이",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "채리",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "클밍",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+  {
+    name: "🐾자 멍멍쌤",
+    github: "",
+    instagram: "",
+    facebook: "",
+    school: "",
+    avatarUrl: "",
+    contents: "",
+  },
+];
+
+export default member;

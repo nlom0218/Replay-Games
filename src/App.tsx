@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import router from "./router";
 import DefaultLayout from "./components/DefaultLayout";
 import { GlobalStyle } from "./styles";
+import Mission from "./mission/Mission";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <DefaultLayout>
         <Routes>
           <Route path={router.home} element={<Home />} />
+          <Route path={router.mission} element={<Mission />} />
         </Routes>
       </DefaultLayout>
     </React.Fragment>
