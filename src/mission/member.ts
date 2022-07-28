@@ -11,12 +11,12 @@ export interface IMember {
 const member: IMember[] = [
   {
     name: "행복한엄쌤",
-    github: "",
-    instagram: "",
+    github: "https://github.com/sendmethere",
+    instagram: "https://www.instagram.com/taaaaes",
     facebook: "",
-    school: "",
-    avatarUrl: "",
-    contents: "",
+    school: "전주송북초등학교",
+    avatarUrl: "/img/mission/행복한엄쌤.png",
+    contents: "전주에서 아이들을 가르치며 개발하는 엄쌤입니다.",
   },
   {
     name: "말랑한거봉",

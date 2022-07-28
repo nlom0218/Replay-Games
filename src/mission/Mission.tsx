@@ -70,7 +70,7 @@ const Flower = styled.div`
   left: 30%;
   animation: ${FlowerAni} 40s linear infinite;
   svg {
-    color: #ff0000;
+    color: #fbff00;
     font-size: 20px;
   }
 `;
