@@ -4,7 +4,6 @@ import {
   AiFillFacebook,
   AiFillGithub,
   AiOutlineInstagram,
-  AiOutlineMail,
 } from "react-icons/ai";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
@@ -13,6 +12,7 @@ interface IImage {
 }
 
 const Container = styled.div`
+  z-index: 5;
   background-color: #f4f4f4;
   border-radius: 10px;
   padding: 40px 20px;
